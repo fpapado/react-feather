@@ -1,12 +1,13 @@
 {
-  "name": "react-feather",
-  "version": "1.1.1",
-  "description": "React component for Feather icons",
+  "name": "@fpapado/react-feather",
+  "version": "1.0.0",
+  "description": "React component for Feather icons. Fork of react-feather for convenience.",
+  "module": "dist/index.es.js",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "node ./bin/build && babel src --out-dir dist --ignore 'src/feather' --copy-files"
+    "build": "node ./bin/build && microbundle"
   },
   "repository": {
     "type": "git",
@@ -20,19 +21,13 @@
     "feather",
     "design"
   ],
-  "author": "Carmelo Pullara",
+  "author": "fpapado",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/carmelopullara/react-feather/issues"
+    "url": "https://github.com/fpapado/react-feather/issues"
   },
-  "homepage": "https://github.com/carmelopullara/react-feather#readme",
+  "homepage": "https://github.com/fpapado/react-feather#readme",
   "devDependencies": {
-    "babel-cli": "^6.24.1",
-    "babel-eslint": "^7.2.3",
-    "babel-plugin-add-module-exports": "^0.2.1",
-    "babel-preset-es2015": "^6.24.1",
-    "babel-preset-react": "^6.24.1",
-    "babel-preset-stage-0": "^6.24.1",
     "camelcase": "^4.1.0",
     "cheerio": "^1.0.0-rc.1",
     "eslint": "^3.19.0",
@@ -41,7 +36,12 @@
     "eslint-plugin-jsx-a11y": "^5.0.3",
     "eslint-plugin-react": "^7.0.1",
     "glob": "^7.1.2",
+    "microbundle": "^0.5.1",
     "prettier": "^1.13.7",
     "uppercamelcase": "^3.0.0"
+  },
+  "peerDependencies": {
+    "react": "^15 || ^16",
+    "react-dom": "^15 || ^16"
   }
 }
