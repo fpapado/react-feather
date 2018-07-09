@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const ArrowUpCircle = props => {
+export const ArrowUpCircle = props => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -23,14 +22,7 @@ const ArrowUpCircle = props => {
   );
 };
 
-ArrowUpCircle.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
 ArrowUpCircle.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
-
-export default ArrowUpCircle;

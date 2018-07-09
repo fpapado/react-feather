@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const Database = props => {
+export const Database = props => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -23,14 +22,7 @@ const Database = props => {
   );
 };
 
-Database.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
 Database.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
-
-export default Database;

@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const AlertTriangle = props => {
+export const AlertTriangle = props => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -23,14 +22,7 @@ const AlertTriangle = props => {
   );
 };
 
-AlertTriangle.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
 AlertTriangle.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
-
-export default AlertTriangle;

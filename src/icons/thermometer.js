@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const Thermometer = props => {
+export const Thermometer = props => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -21,14 +20,7 @@ const Thermometer = props => {
   );
 };
 
-Thermometer.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
 Thermometer.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
-
-export default Thermometer;

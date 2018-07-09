@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const Sliders = props => {
+export const Sliders = props => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -29,14 +28,7 @@ const Sliders = props => {
   );
 };
 
-Sliders.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
 Sliders.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
-
-export default Sliders;

@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const AlertOctagon = props => {
+export const AlertOctagon = props => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -23,14 +22,7 @@ const AlertOctagon = props => {
   );
 };
 
-AlertOctagon.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
 AlertOctagon.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
-
-export default AlertOctagon;

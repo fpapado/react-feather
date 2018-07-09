@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const Clipboard = props => {
+export const Clipboard = props => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -22,14 +21,7 @@ const Clipboard = props => {
   );
 };
 
-Clipboard.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
 Clipboard.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
-
-export default Clipboard;

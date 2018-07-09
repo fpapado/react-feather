@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const AlignCenter = props => {
+export const AlignCenter = props => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -24,14 +23,7 @@ const AlignCenter = props => {
   );
 };
 
-AlignCenter.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
 AlignCenter.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
-
-export default AlignCenter;

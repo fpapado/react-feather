@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const Compass = props => {
+export const Compass = props => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -22,14 +21,7 @@ const Compass = props => {
   );
 };
 
-Compass.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
 Compass.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
-
-export default Compass;

@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const ExternalLink = props => {
+export const ExternalLink = props => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -23,14 +22,7 @@ const ExternalLink = props => {
   );
 };
 
-ExternalLink.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
 ExternalLink.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
-
-export default ExternalLink;

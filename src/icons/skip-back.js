@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const SkipBack = props => {
+export const SkipBack = props => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -22,14 +21,7 @@ const SkipBack = props => {
   );
 };
 
-SkipBack.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
 SkipBack.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
-
-export default SkipBack;

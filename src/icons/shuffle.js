@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const Shuffle = props => {
+export const Shuffle = props => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -25,14 +24,7 @@ const Shuffle = props => {
   );
 };
 
-Shuffle.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
 Shuffle.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
-
-export default Shuffle;

@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const AlertCircle = props => {
+export const AlertCircle = props => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -23,14 +22,7 @@ const AlertCircle = props => {
   );
 };
 
-AlertCircle.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
 AlertCircle.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
-
-export default AlertCircle;

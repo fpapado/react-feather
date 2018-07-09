@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const Briefcase = props => {
+export const Briefcase = props => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -22,14 +21,7 @@ const Briefcase = props => {
   );
 };
 
-Briefcase.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
 Briefcase.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
-
-export default Briefcase;

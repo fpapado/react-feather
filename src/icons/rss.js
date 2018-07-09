@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const Rss = props => {
+export const Rss = props => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -23,14 +22,7 @@ const Rss = props => {
   );
 };
 
-Rss.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
 Rss.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
-
-export default Rss;

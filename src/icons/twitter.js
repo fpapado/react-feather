@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const Twitter = props => {
+export const Twitter = props => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -21,14 +20,7 @@ const Twitter = props => {
   );
 };
 
-Twitter.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
 Twitter.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
-
-export default Twitter;

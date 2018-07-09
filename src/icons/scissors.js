@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const Scissors = props => {
+export const Scissors = props => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -25,14 +24,7 @@ const Scissors = props => {
   );
 };
 
-Scissors.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
 Scissors.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
-
-export default Scissors;

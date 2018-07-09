@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const Layers = props => {
+export const Layers = props => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -23,14 +22,7 @@ const Layers = props => {
   );
 };
 
-Layers.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
 Layers.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
-
-export default Layers;

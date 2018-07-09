@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const Printer = props => {
+export const Printer = props => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -23,14 +22,7 @@ const Printer = props => {
   );
 };
 
-Printer.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
 Printer.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
-
-export default Printer;

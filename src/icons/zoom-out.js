@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const ZoomOut = props => {
+export const ZoomOut = props => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -23,14 +22,7 @@ const ZoomOut = props => {
   );
 };
 
-ZoomOut.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
 ZoomOut.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
-
-export default ZoomOut;

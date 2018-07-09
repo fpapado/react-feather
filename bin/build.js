@@ -24,10 +24,10 @@ glob(`${rootDir}/src/feather/icons/**.svg`, (err, icons) => {
   fs.writeFileSync(
     path.join(rootDir, 'src', 'index.d.ts'),
     initialTypeDefinitions,
-    'utf-8'
+    'utf-8',
   );
 
-  icons.forEach(i => {
+  icons.forEach((i) => {
     const svg = fs.readFileSync(i, 'utf-8');
     const id = path.basename(i, '.svg');
     const ComponentName = uppercamelcase(id);
@@ -38,7 +38,7 @@ glob(`${rootDir}/src/feather/icons/**.svg`, (err, icons) => {
     const location = path.join(rootDir, 'src/icons', fileName);
 
     $('*').each((index, el) => {
-      Object.keys(el.attribs).forEach(x => {
+      Object.keys(el.attribs).forEach((x) => {
         if (x.includes('-')) {
           $(el)
             .attr(camelcase(x), el.attribs[x])
@@ -56,9 +56,8 @@ glob(`${rootDir}/src/feather/icons/**.svg`, (err, icons) => {
 
     const element = `
       import React from 'react';
-      import PropTypes from 'prop-types';
 
-      const ${ComponentName} = (props) => {
+      export const ${ComponentName} = (props) => {
         const { color, size, ...otherProps } = props;
         return (
           ${$('svg')
@@ -70,20 +69,10 @@ glob(`${rootDir}/src/feather/icons/**.svg`, (err, icons) => {
         )
       };
 
-      ${ComponentName}.propTypes = {
-        color: PropTypes.string,
-        size: PropTypes.oneOfType([
-          PropTypes.string,
-          PropTypes.number
-        ]),
-      }
-
       ${ComponentName}.defaultProps = {
         color: 'currentColor',
         size: '24',
       }
-
-      export default ${ComponentName}
     `;
 
     const component = prettier.format(element, {
@@ -95,18 +84,18 @@ glob(`${rootDir}/src/feather/icons/**.svg`, (err, icons) => {
 
     fs.writeFileSync(location, component, 'utf-8');
 
-    const exportString = `export ${ComponentName} from './icons/${id}';\r\n`;
+    const exportString = `export {${ComponentName}} from './icons/${id}';\r\n`;
     fs.appendFileSync(
       path.join(rootDir, 'src', 'index.js'),
       exportString,
-      'utf-8'
+      'utf-8',
     );
 
     const exportTypeString = `export const ${ComponentName}: Icon;\n`;
     fs.appendFileSync(
       path.join(rootDir, 'src', 'index.d.ts'),
       exportTypeString,
-      'utf-8'
+      'utf-8',
     );
   });
 });

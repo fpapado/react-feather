@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const Moon = props => {
+export const Moon = props => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -21,14 +20,7 @@ const Moon = props => {
   );
 };
 
-Moon.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
 Moon.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
-
-export default Moon;

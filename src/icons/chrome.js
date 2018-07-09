@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const Chrome = props => {
+export const Chrome = props => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -25,14 +24,7 @@ const Chrome = props => {
   );
 };
 
-Chrome.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
 Chrome.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
-
-export default Chrome;

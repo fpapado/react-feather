@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const AlignRight = props => {
+export const AlignRight = props => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -24,14 +23,7 @@ const AlignRight = props => {
   );
 };
 
-AlignRight.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
 AlignRight.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
-
-export default AlignRight;

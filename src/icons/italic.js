@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const Italic = props => {
+export const Italic = props => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -23,14 +22,7 @@ const Italic = props => {
   );
 };
 
-Italic.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
 Italic.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
-
-export default Italic;

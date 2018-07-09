@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const Headphones = props => {
+export const Headphones = props => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -22,14 +21,7 @@ const Headphones = props => {
   );
 };
 
-Headphones.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
 Headphones.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
-
-export default Headphones;

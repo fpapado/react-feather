@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const Facebook = props => {
+export const Facebook = props => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -21,14 +20,7 @@ const Facebook = props => {
   );
 };
 
-Facebook.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
 Facebook.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
-
-export default Facebook;

@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const FastForward = props => {
+export const FastForward = props => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -22,14 +21,7 @@ const FastForward = props => {
   );
 };
 
-FastForward.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
 FastForward.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
-
-export default FastForward;

@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const Edit = props => {
+export const Edit = props => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -22,14 +21,7 @@ const Edit = props => {
   );
 };
 
-Edit.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
 Edit.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
-
-export default Edit;

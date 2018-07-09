@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const ToggleLeft = props => {
+export const ToggleLeft = props => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -22,14 +21,7 @@ const ToggleLeft = props => {
   );
 };
 
-ToggleLeft.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
 ToggleLeft.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
-
-export default ToggleLeft;

@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const Upload = props => {
+export const Upload = props => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -23,14 +22,7 @@ const Upload = props => {
   );
 };
 
-Upload.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
 Upload.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
-
-export default Upload;

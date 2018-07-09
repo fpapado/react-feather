@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const PhoneIncoming = props => {
+export const PhoneIncoming = props => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -23,14 +22,7 @@ const PhoneIncoming = props => {
   );
 };
 
-PhoneIncoming.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
 PhoneIncoming.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
-
-export default PhoneIncoming;

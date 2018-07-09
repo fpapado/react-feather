@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const Battery = props => {
+export const Battery = props => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -22,14 +21,7 @@ const Battery = props => {
   );
 };
 
-Battery.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
 Battery.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
-
-export default Battery;

@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const ChevronsLeft = props => {
+export const ChevronsLeft = props => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -22,14 +21,7 @@ const ChevronsLeft = props => {
   );
 };
 
-ChevronsLeft.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
 ChevronsLeft.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
-
-export default ChevronsLeft;

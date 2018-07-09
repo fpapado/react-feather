@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const MapPin = props => {
+export const MapPin = props => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -22,14 +21,7 @@ const MapPin = props => {
   );
 };
 
-MapPin.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
 MapPin.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
-
-export default MapPin;

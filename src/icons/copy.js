@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const Copy = props => {
+export const Copy = props => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -22,14 +21,7 @@ const Copy = props => {
   );
 };
 
-Copy.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
 Copy.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
-
-export default Copy;

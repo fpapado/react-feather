@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const Pause = props => {
+export const Pause = props => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -22,14 +21,7 @@ const Pause = props => {
   );
 };
 
-Pause.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
 Pause.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
-
-export default Pause;

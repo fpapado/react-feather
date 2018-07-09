@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const Layout = props => {
+export const Layout = props => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -23,14 +22,7 @@ const Layout = props => {
   );
 };
 
-Layout.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
 Layout.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
-
-export default Layout;

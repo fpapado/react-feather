@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const Cpu = props => {
+export const Cpu = props => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -30,14 +29,7 @@ const Cpu = props => {
   );
 };
 
-Cpu.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
 Cpu.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
-
-export default Cpu;

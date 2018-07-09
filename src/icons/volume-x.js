@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const VolumeX = props => {
+export const VolumeX = props => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -23,14 +22,7 @@ const VolumeX = props => {
   );
 };
 
-VolumeX.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
 VolumeX.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
-
-export default VolumeX;

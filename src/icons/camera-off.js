@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const CameraOff = props => {
+export const CameraOff = props => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -22,14 +21,7 @@ const CameraOff = props => {
   );
 };
 
-CameraOff.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
 CameraOff.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
-
-export default CameraOff;

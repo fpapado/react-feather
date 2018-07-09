@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const CloudSnow = props => {
+export const CloudSnow = props => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -27,14 +26,7 @@ const CloudSnow = props => {
   );
 };
 
-CloudSnow.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
 CloudSnow.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
-
-export default CloudSnow;

@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const Bookmark = props => {
+export const Bookmark = props => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -21,14 +20,7 @@ const Bookmark = props => {
   );
 };
 
-Bookmark.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
 Bookmark.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
-
-export default Bookmark;

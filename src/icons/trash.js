@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const Trash = props => {
+export const Trash = props => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -22,14 +21,7 @@ const Trash = props => {
   );
 };
 
-Trash.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
 Trash.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
-
-export default Trash;

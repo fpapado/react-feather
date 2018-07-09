@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const LifeBuoy = props => {
+export const LifeBuoy = props => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -27,14 +26,7 @@ const LifeBuoy = props => {
   );
 };
 
-LifeBuoy.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
 LifeBuoy.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
-
-export default LifeBuoy;

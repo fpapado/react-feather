@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const Shield = props => {
+export const Shield = props => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -21,14 +20,7 @@ const Shield = props => {
   );
 };
 
-Shield.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
 Shield.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
-
-export default Shield;

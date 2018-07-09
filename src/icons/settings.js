@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const Settings = props => {
+export const Settings = props => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -22,14 +21,7 @@ const Settings = props => {
   );
 };
 
-Settings.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
 Settings.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
-
-export default Settings;

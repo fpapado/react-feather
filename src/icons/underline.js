@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const Underline = props => {
+export const Underline = props => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -22,14 +21,7 @@ const Underline = props => {
   );
 };
 
-Underline.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
 Underline.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
-
-export default Underline;

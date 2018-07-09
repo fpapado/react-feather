@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const MicOff = props => {
+export const MicOff = props => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -25,14 +24,7 @@ const MicOff = props => {
   );
 };
 
-MicOff.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
 MicOff.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
-
-export default MicOff;

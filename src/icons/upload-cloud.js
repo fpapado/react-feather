@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const UploadCloud = props => {
+export const UploadCloud = props => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -24,14 +23,7 @@ const UploadCloud = props => {
   );
 };
 
-UploadCloud.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
 UploadCloud.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
-
-export default UploadCloud;

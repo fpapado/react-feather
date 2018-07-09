@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const DownloadCloud = props => {
+export const DownloadCloud = props => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -23,14 +22,7 @@ const DownloadCloud = props => {
   );
 };
 
-DownloadCloud.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
 DownloadCloud.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
-
-export default DownloadCloud;

@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const GitMerge = props => {
+export const GitMerge = props => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -23,14 +22,7 @@ const GitMerge = props => {
   );
 };
 
-GitMerge.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
 GitMerge.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
-
-export default GitMerge;

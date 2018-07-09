@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const Youtube = props => {
+export const Youtube = props => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -22,14 +21,7 @@ const Youtube = props => {
   );
 };
 
-Youtube.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
 Youtube.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
-
-export default Youtube;

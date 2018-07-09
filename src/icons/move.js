@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const Move = props => {
+export const Move = props => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -26,14 +25,7 @@ const Move = props => {
   );
 };
 
-Move.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
 Move.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
-
-export default Move;

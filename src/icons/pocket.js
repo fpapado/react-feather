@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const Pocket = props => {
+export const Pocket = props => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -22,14 +21,7 @@ const Pocket = props => {
   );
 };
 
-Pocket.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
 Pocket.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
-
-export default Pocket;

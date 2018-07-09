@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const BarChart = props => {
+export const BarChart = props => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -23,14 +22,7 @@ const BarChart = props => {
   );
 };
 
-BarChart.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
 BarChart.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
-
-export default BarChart;

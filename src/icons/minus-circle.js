@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const MinusCircle = props => {
+export const MinusCircle = props => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -22,14 +21,7 @@ const MinusCircle = props => {
   );
 };
 
-MinusCircle.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
 MinusCircle.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
-
-export default MinusCircle;

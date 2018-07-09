@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const PlayCircle = props => {
+export const PlayCircle = props => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -22,14 +21,7 @@ const PlayCircle = props => {
   );
 };
 
-PlayCircle.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
 PlayCircle.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
-
-export default PlayCircle;

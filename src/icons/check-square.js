@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const CheckSquare = props => {
+export const CheckSquare = props => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -22,14 +21,7 @@ const CheckSquare = props => {
   );
 };
 
-CheckSquare.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
 CheckSquare.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
-
-export default CheckSquare;

@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const DollarSign = props => {
+export const DollarSign = props => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -22,14 +21,7 @@ const DollarSign = props => {
   );
 };
 
-DollarSign.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
 DollarSign.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
-
-export default DollarSign;

@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const TrendingDown = props => {
+export const TrendingDown = props => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -22,14 +21,7 @@ const TrendingDown = props => {
   );
 };
 
-TrendingDown.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
 TrendingDown.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
-
-export default TrendingDown;

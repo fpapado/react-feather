@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const RefreshCcw = props => {
+export const RefreshCcw = props => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -23,14 +22,7 @@ const RefreshCcw = props => {
   );
 };
 
-RefreshCcw.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
 RefreshCcw.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
-
-export default RefreshCcw;

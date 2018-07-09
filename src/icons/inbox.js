@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const Inbox = props => {
+export const Inbox = props => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -22,14 +21,7 @@ const Inbox = props => {
   );
 };
 
-Inbox.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
 Inbox.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
-
-export default Inbox;

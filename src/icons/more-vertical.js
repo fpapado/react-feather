@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const MoreVertical = props => {
+export const MoreVertical = props => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -23,14 +22,7 @@ const MoreVertical = props => {
   );
 };
 
-MoreVertical.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
 MoreVertical.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
-
-export default MoreVertical;

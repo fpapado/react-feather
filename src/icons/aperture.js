@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const Aperture = props => {
+export const Aperture = props => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -27,14 +26,7 @@ const Aperture = props => {
   );
 };
 
-Aperture.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
 Aperture.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
-
-export default Aperture;

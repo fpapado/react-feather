@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const Linkedin = props => {
+export const Linkedin = props => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -23,14 +22,7 @@ const Linkedin = props => {
   );
 };
 
-Linkedin.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
 Linkedin.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
-
-export default Linkedin;

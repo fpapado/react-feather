@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const Truck = props => {
+export const Truck = props => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -24,14 +23,7 @@ const Truck = props => {
   );
 };
 
-Truck.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
 Truck.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
-
-export default Truck;

@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const Tag = props => {
+export const Tag = props => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -22,14 +21,7 @@ const Tag = props => {
   );
 };
 
-Tag.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
 Tag.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
-
-export default Tag;

@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const LogOut = props => {
+export const LogOut = props => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -23,14 +22,7 @@ const LogOut = props => {
   );
 };
 
-LogOut.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
 LogOut.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
-
-export default LogOut;

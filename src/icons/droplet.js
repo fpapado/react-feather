@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const Droplet = props => {
+export const Droplet = props => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -21,14 +20,7 @@ const Droplet = props => {
   );
 };
 
-Droplet.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
 Droplet.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
-
-export default Droplet;

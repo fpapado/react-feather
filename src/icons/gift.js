@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const Gift = props => {
+export const Gift = props => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -25,14 +24,7 @@ const Gift = props => {
   );
 };
 
-Gift.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
 Gift.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
-
-export default Gift;

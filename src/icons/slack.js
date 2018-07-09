@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const Slack = props => {
+export const Slack = props => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -25,14 +24,7 @@ const Slack = props => {
   );
 };
 
-Slack.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
 Slack.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
-
-export default Slack;

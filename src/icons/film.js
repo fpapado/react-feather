@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const Film = props => {
+export const Film = props => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -28,14 +27,7 @@ const Film = props => {
   );
 };
 
-Film.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
 Film.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
-
-export default Film;

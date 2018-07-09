@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const StopCircle = props => {
+export const StopCircle = props => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -22,14 +21,7 @@ const StopCircle = props => {
   );
 };
 
-StopCircle.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
 StopCircle.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
-
-export default StopCircle;

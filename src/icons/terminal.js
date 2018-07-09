@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const Terminal = props => {
+export const Terminal = props => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -22,14 +21,7 @@ const Terminal = props => {
   );
 };
 
-Terminal.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
 Terminal.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
-
-export default Terminal;

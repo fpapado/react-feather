@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const Flag = props => {
+export const Flag = props => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -22,14 +21,7 @@ const Flag = props => {
   );
 };
 
-Flag.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
 Flag.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
-
-export default Flag;

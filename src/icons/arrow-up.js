@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const ArrowUp = props => {
+export const ArrowUp = props => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -22,14 +21,7 @@ const ArrowUp = props => {
   );
 };
 
-ArrowUp.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
 ArrowUp.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
-
-export default ArrowUp;

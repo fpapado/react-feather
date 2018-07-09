@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const Watch = props => {
+export const Watch = props => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -23,14 +22,7 @@ const Watch = props => {
   );
 };
 
-Watch.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
 Watch.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
-
-export default Watch;

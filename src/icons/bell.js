@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const Bell = props => {
+export const Bell = props => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -21,14 +20,7 @@ const Bell = props => {
   );
 };
 
-Bell.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
 Bell.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
-
-export default Bell;

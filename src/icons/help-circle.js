@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const HelpCircle = props => {
+export const HelpCircle = props => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -23,14 +22,7 @@ const HelpCircle = props => {
   );
 };
 
-HelpCircle.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
 HelpCircle.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
-
-export default HelpCircle;

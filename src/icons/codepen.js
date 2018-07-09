@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const Codepen = props => {
+export const Codepen = props => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -25,14 +24,7 @@ const Codepen = props => {
   );
 };
 
-Codepen.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
 Codepen.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
-
-export default Codepen;

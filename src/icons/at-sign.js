@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const AtSign = props => {
+export const AtSign = props => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -22,14 +21,7 @@ const AtSign = props => {
   );
 };
 
-AtSign.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
 AtSign.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
-
-export default AtSign;

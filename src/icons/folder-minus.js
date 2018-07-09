@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const FolderMinus = props => {
+export const FolderMinus = props => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -22,14 +21,7 @@ const FolderMinus = props => {
   );
 };
 
-FolderMinus.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
 FolderMinus.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
-
-export default FolderMinus;

@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const Loader = props => {
+export const Loader = props => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -28,14 +27,7 @@ const Loader = props => {
   );
 };
 
-Loader.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
 Loader.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
-
-export default Loader;

@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const Rewind = props => {
+export const Rewind = props => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -22,14 +21,7 @@ const Rewind = props => {
   );
 };
 
-Rewind.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
 Rewind.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
-
-export default Rewind;

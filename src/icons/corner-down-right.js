@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const CornerDownRight = props => {
+export const CornerDownRight = props => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -22,14 +21,7 @@ const CornerDownRight = props => {
   );
 };
 
-CornerDownRight.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
 CornerDownRight.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
-
-export default CornerDownRight;

@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const Mail = props => {
+export const Mail = props => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -22,14 +21,7 @@ const Mail = props => {
   );
 };
 
-Mail.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
 Mail.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
-
-export default Mail;

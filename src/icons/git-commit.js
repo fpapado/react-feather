@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const GitCommit = props => {
+export const GitCommit = props => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -23,14 +22,7 @@ const GitCommit = props => {
   );
 };
 
-GitCommit.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
 GitCommit.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
-
-export default GitCommit;

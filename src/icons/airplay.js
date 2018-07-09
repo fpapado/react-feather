@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const Airplay = props => {
+export const Airplay = props => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -22,14 +21,7 @@ const Airplay = props => {
   );
 };
 
-Airplay.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
 Airplay.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
-
-export default Airplay;

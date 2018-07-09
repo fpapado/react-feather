@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const Gitlab = props => {
+export const Gitlab = props => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -21,14 +20,7 @@ const Gitlab = props => {
   );
 };
 
-Gitlab.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
 Gitlab.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
-
-export default Gitlab;

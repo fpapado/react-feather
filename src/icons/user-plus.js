@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const UserPlus = props => {
+export const UserPlus = props => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -24,14 +23,7 @@ const UserPlus = props => {
   );
 };
 
-UserPlus.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
 UserPlus.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
-
-export default UserPlus;

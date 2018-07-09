@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const Minimize = props => {
+export const Minimize = props => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -21,14 +20,7 @@ const Minimize = props => {
   );
 };
 
-Minimize.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
 Minimize.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
-
-export default Minimize;

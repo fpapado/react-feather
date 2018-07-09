@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const Share2 = props => {
+export const Share2 = props => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -25,14 +24,7 @@ const Share2 = props => {
   );
 };
 
-Share2.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
 Share2.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
-
-export default Share2;

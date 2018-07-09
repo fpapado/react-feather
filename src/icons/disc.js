@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const Disc = props => {
+export const Disc = props => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -22,14 +21,7 @@ const Disc = props => {
   );
 };
 
-Disc.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
 Disc.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
-
-export default Disc;

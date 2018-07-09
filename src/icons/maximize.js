@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const Maximize = props => {
+export const Maximize = props => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -21,14 +20,7 @@ const Maximize = props => {
   );
 };
 
-Maximize.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
 Maximize.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
-
-export default Maximize;

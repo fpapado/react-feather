@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const Filter = props => {
+export const Filter = props => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -21,14 +20,7 @@ const Filter = props => {
   );
 };
 
-Filter.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
 Filter.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
-
-export default Filter;

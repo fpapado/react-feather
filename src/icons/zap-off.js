@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const ZapOff = props => {
+export const ZapOff = props => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -24,14 +23,7 @@ const ZapOff = props => {
   );
 };
 
-ZapOff.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
 ZapOff.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
-
-export default ZapOff;

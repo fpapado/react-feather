@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const GitPullRequest = props => {
+export const GitPullRequest = props => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -24,14 +23,7 @@ const GitPullRequest = props => {
   );
 };
 
-GitPullRequest.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
 GitPullRequest.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
-
-export default GitPullRequest;

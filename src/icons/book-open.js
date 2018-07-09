@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const BookOpen = props => {
+export const BookOpen = props => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -22,14 +21,7 @@ const BookOpen = props => {
   );
 };
 
-BookOpen.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
 BookOpen.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
-
-export default BookOpen;

@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const Monitor = props => {
+export const Monitor = props => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -23,14 +22,7 @@ const Monitor = props => {
   );
 };
 
-Monitor.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
 Monitor.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
-
-export default Monitor;

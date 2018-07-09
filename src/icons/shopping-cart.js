@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const ShoppingCart = props => {
+export const ShoppingCart = props => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -23,14 +22,7 @@ const ShoppingCart = props => {
   );
 };
 
-ShoppingCart.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
 ShoppingCart.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
-
-export default ShoppingCart;

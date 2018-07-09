@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const CheckCircle = props => {
+export const CheckCircle = props => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -22,14 +21,7 @@ const CheckCircle = props => {
   );
 };
 
-CheckCircle.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
 CheckCircle.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
-
-export default CheckCircle;

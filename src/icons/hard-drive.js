@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const HardDrive = props => {
+export const HardDrive = props => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -24,14 +23,7 @@ const HardDrive = props => {
   );
 };
 
-HardDrive.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
 HardDrive.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
-
-export default HardDrive;

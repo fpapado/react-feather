@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const Octagon = props => {
+export const Octagon = props => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -21,14 +20,7 @@ const Octagon = props => {
   );
 };
 
-Octagon.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
 Octagon.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
-
-export default Octagon;

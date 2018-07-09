@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const FileMinus = props => {
+export const FileMinus = props => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -23,14 +22,7 @@ const FileMinus = props => {
   );
 };
 
-FileMinus.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
 FileMinus.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
-
-export default FileMinus;
