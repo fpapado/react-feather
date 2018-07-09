@@ -1,16 +1,16 @@
 {
   "name": "@fpapado/react-feather",
-  "version": "0.9.0",
+  "version": "1.0.0",
   "description": "React component for Feather icons. Fork of react-feather for convenience.",
   "source": "build/index.js",
   "module": "dist/index.es.js",
   "main": "dist/index.js",
-  "typings": "dist/index.d.ts",
+  "types": "dist/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "babel": "babel src --out-dir build --ignore 'src/feather' --copy-files",
-    "build": "node ./bin/build && npm run -s babel && microbundle",
-    "release": "git commit -am $npm_package_version && git tag $npm_package_version && git push && git push --tags && npm publish"
+    "build": "node ./bin/build && npm run -s babel && cp src/index.d.ts dist/ && microbundle",
+    "release": "git commit -am $npm_package_version && git tag $npm_package_version && git push && git push --tags && npm publish --access=public"
   },
   "repository": {
     "type": "git",
