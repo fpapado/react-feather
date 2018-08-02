@@ -1,6 +1,6 @@
 {
   "name": "@fpapado/react-feather",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "React component for Feather icons. Fork of react-feather for convenience.",
   "source": "build/index.js",
   "module": "dist/index.es.js",
