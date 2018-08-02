@@ -1,7 +1,7 @@
 import React from 'react';
 
 export const CloudSnow = props => {
-  const { color, size, ...otherProps } = props;
+  const { purpose, color, size, ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -13,6 +13,9 @@ export const CloudSnow = props => {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      role="image"
+      focusable="false"
+      aria-hidden={purpose === 'decorative'}
       {...otherProps}
     >
       <path d="M20 17.58A5 5 0 0 0 18 8h-1.26A8 8 0 1 0 4 16.25" />

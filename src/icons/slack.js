@@ -1,7 +1,7 @@
 import React from 'react';
 
 export const Slack = props => {
-  const { color, size, ...otherProps } = props;
+  const { purpose, color, size, ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -13,6 +13,9 @@ export const Slack = props => {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      role="image"
+      focusable="false"
+      aria-hidden={purpose === 'decorative'}
       {...otherProps}
     >
       <path d="M22.08 9C19.81 1.41 16.54-.35 9 1.92S-.35 7.46 1.92 15 7.46 24.35 15 22.08 24.35 16.54 22.08 9z" />

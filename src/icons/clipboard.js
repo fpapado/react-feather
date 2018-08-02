@@ -1,7 +1,7 @@
 import React from 'react';
 
 export const Clipboard = props => {
-  const { color, size, ...otherProps } = props;
+  const { purpose, color, size, ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -13,6 +13,9 @@ export const Clipboard = props => {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      role="image"
+      focusable="false"
+      aria-hidden={purpose === 'decorative'}
       {...otherProps}
     >
       <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />

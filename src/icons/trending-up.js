@@ -1,7 +1,7 @@
 import React from 'react';
 
 export const TrendingUp = props => {
-  const { color, size, ...otherProps } = props;
+  const { purpose, color, size, ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -13,6 +13,9 @@ export const TrendingUp = props => {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      role="image"
+      focusable="false"
+      aria-hidden={purpose === 'decorative'}
       {...otherProps}
     >
       <polyline points="23 6 13.5 15.5 8.5 10.5 1 18" />

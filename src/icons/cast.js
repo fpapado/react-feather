@@ -1,7 +1,7 @@
 import React from 'react';
 
 export const Cast = props => {
-  const { color, size, ...otherProps } = props;
+  const { purpose, color, size, ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -13,6 +13,9 @@ export const Cast = props => {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      role="image"
+      focusable="false"
+      aria-hidden={purpose === 'decorative'}
       {...otherProps}
     >
       <path d="M2 16.1A5 5 0 0 1 5.9 20M2 12.05A9 9 0 0 1 9.95 20M2 8V6a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-6" />

@@ -3,6 +3,7 @@
 [![npm](https://img.shields.io/npm/v/@fpapado/react-feather.svg)](https://www.npmjs.com/package/@fpapado/react-feather)
 
 Fork of [react-feather](https://github.com/carmelopullara/react-feather) with `microbundle` as the build step, and ES modules in the distribution.
+Also has accessible defaults.
 
 > Simply beautiful SVG icons as React components.
 > Designed by [colebemis](https://github.com/colebemis/) on a 24x24 grid with an emphasis on functionality, consistency and simplicity.
@@ -20,19 +21,27 @@ This means that you ship only the icons used.
 ```javascript
 import { Camera } from 'react-feather';
 
-class MyClass extends React.Component {
-  render() {
-    return <Camera />
-  }
-}
+const MyComponent = () => (
+  <div>
+    <span>Photos</span>
+    <Camera purpose="decorative"/>
+  </div>
+)
 ```
 
 Icons can be configured with props:
 ```javascript
-  <Camera color="red" size={48} />
+  <Camera color="red" size={48} purpose/>
 ```
 
+### Purpose prop
+The `purpose` prop is technically required, and allows the buttons to expose accessible defaults.
+There are two options:
+- "decorative", which marks the Icon to be ignored by assistive technologies;
+- "standalone", which markes the Icon as content, and exposes it to assistive technlogies.
+
 ### Why would I use this?
+- This package includes accessible
 - `react-feather` requires path imports for bundle savings. That results in more verbose imports, and exposes distribution details. Imo, those should be opaque.
 - I have not had much luck using such imports with Typescript.
 - `react-feather` includes propTypes, which I do not need.

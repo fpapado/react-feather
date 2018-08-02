@@ -1,12 +1,16 @@
 /// <reference types="react" />
 import { ComponentType, SVGAttributes } from 'react';
 
-interface Props extends SVGAttributes<SVGElement> {
+export interface IconProps extends SVGAttributes<SVGElement> {
+  /** Whether the icon is content and to be announced, or purely decorative */
+  purpose: Purpose;
   color?: string;
   size?: string | number;
 }
 
-type Icon = ComponentType<Props>;
+export type Purpose = 'decorative' | 'standalone';
+
+export type Icon = ComponentType<IconProps>;
 export const Activity: Icon;
 export const Airplay: Icon;
 export const AlertCircle: Icon;

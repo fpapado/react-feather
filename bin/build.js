@@ -11,12 +11,16 @@ const rootDir = path.join(__dirname, '..');
 const initialTypeDefinitions = `/// <reference types="react" />
 import { ComponentType, SVGAttributes } from 'react';
 
-interface Props extends SVGAttributes<SVGElement> {
+export interface IconProps extends SVGAttributes<SVGElement> {
+  /** Whether the icon is content and to be announced, or purely decorative */
+  purpose: Purpose;
   color?: string;
   size?: string | number;
 }
 
-type Icon = ComponentType<Props>;
+export type Purpose = 'decorative' | 'standalone';
+
+export type Icon = ComponentType<IconProps>;
 `;
 
 glob(`${rootDir}/src/feather/icons/**.svg`, (err, icons) => {
@@ -24,10 +28,10 @@ glob(`${rootDir}/src/feather/icons/**.svg`, (err, icons) => {
   fs.writeFileSync(
     path.join(rootDir, 'src', 'index.d.ts'),
     initialTypeDefinitions,
-    'utf-8',
+    'utf-8'
   );
 
-  icons.forEach((i) => {
+  icons.forEach(i => {
     const svg = fs.readFileSync(i, 'utf-8');
     const id = path.basename(i, '.svg');
     const ComponentName = uppercamelcase(id);
@@ -38,7 +42,7 @@ glob(`${rootDir}/src/feather/icons/**.svg`, (err, icons) => {
     const location = path.join(rootDir, 'src/icons', fileName);
 
     $('*').each((index, el) => {
-      Object.keys(el.attribs).forEach((x) => {
+      Object.keys(el.attribs).forEach(x => {
         if (x.includes('-')) {
           $(el)
             .attr(camelcase(x), el.attribs[x])
@@ -50,6 +54,9 @@ glob(`${rootDir}/src/feather/icons/**.svg`, (err, icons) => {
       });
 
       if (el.name === 'svg') {
+        $(el).attr('role', 'image');
+        $(el).attr('focusable', 'false');
+        $(el).attr('aria-hidden', '...');
         $(el).attr('otherProps', '...');
       }
     });
@@ -58,13 +65,17 @@ glob(`${rootDir}/src/feather/icons/**.svg`, (err, icons) => {
       import React from 'react';
 
       export const ${ComponentName} = (props) => {
-        const { color, size, ...otherProps } = props;
+        const { purpose, color, size, ...otherProps } = props;
         return (
           ${$('svg')
             .toString()
             .replace(new RegExp('stroke="currentColor"', 'g'), 'stroke={color}')
             .replace('width="24"', 'width={size}')
             .replace('height="24"', 'height={size}')
+            .replace(
+              'aria-hidden="..."',
+              `aria-hidden={purpose === 'decorative'}`
+            )
             .replace('otherProps="..."', '{...otherProps}')}
         )
       };
@@ -88,14 +99,14 @@ glob(`${rootDir}/src/feather/icons/**.svg`, (err, icons) => {
     fs.appendFileSync(
       path.join(rootDir, 'src', 'index.js'),
       exportString,
-      'utf-8',
+      'utf-8'
     );
 
     const exportTypeString = `export const ${ComponentName}: Icon;\n`;
     fs.appendFileSync(
       path.join(rootDir, 'src', 'index.d.ts'),
       exportTypeString,
-      'utf-8',
+      'utf-8'
     );
   });
 });
