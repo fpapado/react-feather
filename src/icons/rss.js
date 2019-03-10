@@ -13,7 +13,7 @@ export const Rss = props => {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      role="image"
+      role="img"
       focusable="false"
       aria-hidden={purpose === 'decorative'}
       {...otherProps}
