@@ -31,7 +31,7 @@ const MyComponent = () => (
 
 Icons can be configured with props:
 ```javascript
-  <Camera color="red" size={48} purpose/>
+  <Camera color="red" size={48} purpose="decorative "/>
 ```
 
 ### Purpose prop
@@ -41,13 +41,12 @@ There are two options:
 - "standalone", which markes the Icon as content, and exposes it to assistive technlogies.
 
 ### Why would I use this?
-- This package includes accessible
+- This package includes accessible defaults (`focusable="false"`, `role="img"`, handling of purpose being "decorative" or "standalone")
 - `react-feather` requires path imports for bundle savings. That results in more verbose imports, and exposes distribution details. Imo, those should be opaque.
 - I have not had much luck using such imports with Typescript.
 - `react-feather` includes propTypes, which I do not need.
 
 ### Why would I not use this?
 - You are fine with full-path imports and / or your setup supports them.
-- You are using CommonJS as the authoring format and want bundle-savings via full paths; this fork does not support that.
 - NPM download count is important to you.
 

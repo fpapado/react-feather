@@ -54,7 +54,7 @@ glob(`${rootDir}/src/feather/icons/**.svg`, (err, icons) => {
       });
 
       if (el.name === 'svg') {
-        $(el).attr('role', 'image');
+        $(el).attr('role', 'img');
         $(el).attr('focusable', 'false');
         $(el).attr('aria-hidden', '...');
         $(el).attr('otherProps', '...');
